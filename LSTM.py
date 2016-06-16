@@ -15,8 +15,9 @@ from keras.utils.data_utils import get_file
 import numpy as np
 import random
 import sys
+import os
 
-path = get_file('nietzsche.txt', origin="https://s3.amazonaws.com/text-datasets/nietzsche.txt")
+path = os.path.join("Data", "corpus.txt")
 text = open(path).read().lower()
 print('corpus length:', len(text))
 
