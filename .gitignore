@@ -1,2 +1,4 @@
-.ipynb_checkpoints
-.npy
+*.ipynb_checkpoints
+*.npy
+*ssb.txt
+corpus.txt
