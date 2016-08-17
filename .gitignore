@@ -1,7 +1,7 @@
 ### IPythonNotebook ###
 # Temporary data
 .ipynb_checkpoints/
-.pyc
+*.pyc
 
 
 ### Data Files ###
