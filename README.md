@@ -2,6 +2,12 @@
 
 Project to generate new Game of Thrones book using LSTM neural networks using the existing 5 books as source material.
 
+## Dependencies
+
+This project was tested with Keras and Theano on windows 10. Training takes ~40 minutes per epoch with a GTX970, CUDA, CuDNNv5 and CNMEM.
+Follow the instructions posted here to get a local deep learning environment working in windows:
+1. http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/
+2. http://ankivil.com/making-theano-faster-with-cudnn-and-cnmem-on-windows-10/
 ## TODO
 
 - explore and visualize GoT word vectors (test R + L = J)
