@@ -1,4 +1,9 @@
-*.ipynb_checkpoints
-*.npy
-*ssb.txt
-corpus.txt
+### IPythonNotebook ###
+# Temporary data
+.ipynb_checkpoints/
+
+
+### Data Files ###
+/data/processed/*
+/data/raw/*
+/data/train/*
