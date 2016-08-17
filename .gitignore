@@ -1,1 +1,9 @@
-.ipynb_checkpoints
+
+*.pyc
+*.npy
+
+
+
+*ssb.txt
+corpus.txt
+*.npy
