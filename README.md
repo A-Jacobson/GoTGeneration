@@ -10,6 +10,18 @@ Follow the instructions posted here to get a local deep learning environment wor
 1. http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/
 2. http://ankivil.com/making-theano-faster-with-cudnn-and-cnmem-on-windows-10/
 
+
+## The Data
+I'm using the first 5 Game of thrones books concatenated into one large corpus. Unfortunately, I doubt I'm allowed to host the raw text (as unpleasant as it would be to read in that format) on github.
+In spite of this, the books are out there. If you own them already, try googling Game of Thrones.txt. The model will work also with any large corpus of text, not just game of thrones books.
+
+
+## The Model
+This is a Character level language model inspired by Andrej Kaparthy's cs231 lectures and The Unreasonable Effectiveness of Recurrent Neural Networks blog post (http://karpathy.github.io/2015/05/21/rnn-effectiveness/). 
+
+
+
+
 ## TODO
 
 - explore and visualize GoT word vectors (test R + L = J)

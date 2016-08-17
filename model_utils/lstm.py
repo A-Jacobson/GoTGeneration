@@ -15,5 +15,5 @@ def create_lstm(input_shape):
     model.add(Dropout(0.2))
     model.add(Dense(input_shape[1]))
     model.add(Activation('softmax'))
-    model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
+    model.compile(loss='categorical_crossentropy', optimizer='adam')
     return model

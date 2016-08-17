@@ -1,5 +1,6 @@
 import os
 import fnmatch
+import re
 
 def combine_documents(path=os.path.join(os.curdir, "data/processed"), name='corpus.txt'):
     """
@@ -47,6 +48,9 @@ def fix_ascii(text):
     return text
 
 def process_files(inpath=os.path.join(os.curdir, "data/raw"), outpath=os.path.join(os.curdir, "data/processed")):
+    """
+    fix ascii encoding and remove newlines
+    """
     filenames = [f for f in os.listdir(inpath) if fnmatch.fnmatch(f, '*.txt')]
     print "fixing ascii encoding..."
     for f in filenames:
@@ -54,4 +58,7 @@ def process_files(inpath=os.path.join(os.curdir, "data/raw"), outpath=os.path.jo
         infile = os.path.join(inpath, f)
         outname = os.path.join(outpath, f)
         with open(outname, 'w') as outfile:
-            outfile.write(fix_ascii(open(infile).read()))
+            text = open(infile).read()
+            text = fix_ascii(text)
+            text = re.sub('\n+', "", text)
+            outfile.write(text)

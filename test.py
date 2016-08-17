@@ -1,4 +1,4 @@
-import cPickle
+import numpy as np
 
-x = (40, 20)
-print x[1]
+X = np.array([[range(300),[range(40)], [range(60)]]])
+print X.shape

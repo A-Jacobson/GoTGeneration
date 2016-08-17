@@ -5,10 +5,9 @@ import numpy as np
 def make_dicts(path=os.path.join("data", "processed", "corpus.txt")):
     text = open(path).read().lower()
     chars = set(text)
-    print('total chars:', len(chars))
     char_indices = dict((c, i) for i, c in enumerate(chars))
     indices_char = dict((i, c) for i, c in enumerate(chars))
-    return chars, char_indices, indices_char
+    return chars, char_indices, indices_char, text
 
 # cut the text in semi-redundant sequences of maxlen characters
 def make_sequences(maxlen, step, path=os.path.join("data", "processed", "corpus.txt")):
