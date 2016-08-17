@@ -4,12 +4,13 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.layers import LSTM
 from keras.utils.data_utils import get_file
+from keras.callbacks import EarlyStopping
 import numpy as np
 import random
 import sys
 import os
 
-path = os.path.join("Data", "corpus.txt")
+path = os.path.join("data", "processed", "corpus.txt")
 text = open(path).read().lower()
 print('corpus length:', len(text))
 
