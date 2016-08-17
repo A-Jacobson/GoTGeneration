@@ -2,13 +2,12 @@ from data_utils.clean import combine_documents, process_files
 from data_utils.vectorize import make_sequences, vectorize, make_dicts
 from config import preprocessing_config
 
-config = preprocessing_config()
-maxlen = config['MAXLEN']
-step = config['STEP']
+config = preprocessing_config
+
 chars, char_indices, indices_char, text = make_dicts()
 
 if __name__ == "__main__":
     process_files()
     combine_documents()
-    sentences, next_chars = make_sequences(maxlen=maxlen, step=step)
+    sentences, next_chars = make_sequences(maxlen=config['maxlen'], step=config['step'])
     vectorize(sentences, next_chars, chars, maxlen, char_indices)
