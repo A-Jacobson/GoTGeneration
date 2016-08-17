@@ -36,7 +36,6 @@ for i, sentence in enumerate(sentences):
     y[i, char_indices[next_chars[i]]] = 1
 
 print X[0].shape
-
 # create model
 model = create_lstm(input_shape=maxlen, len(chars))
 
