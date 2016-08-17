@@ -1,10 +1,9 @@
-### IPythonNotebook ###
-# Temporary data
-.ipynb_checkpoints/
+
 *.pyc
+*.npy
 
 
-### Data Files ###
+
 *ssb.txt
 corpus.txt
 *.npy
