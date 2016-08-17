@@ -1,8 +1,8 @@
 from data_utils.clean import combine_documents, process_files
 from data_utils.vectorize import make_sequences, vectorize, make_dicts
-from config import preprocessing_config
+from config import training_config
 
-config = preprocessing_config
+config = training_config
 
 chars, char_indices, indices_char, text = make_dicts()
 
