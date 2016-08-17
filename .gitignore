@@ -1,9 +1,11 @@
 ### IPythonNotebook ###
 # Temporary data
 .ipynb_checkpoints/
+.pyc
 
 
 ### Data Files ###
 /data/processed/*
 /data/raw/*
 /data/train/*
+*.npy
