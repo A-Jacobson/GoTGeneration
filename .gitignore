@@ -5,7 +5,6 @@
 
 
 ### Data Files ###
-/data/processed/*
-/data/raw/*
-/data/train/*
+*ssb.txt
+corpus.txt
 *.npy
