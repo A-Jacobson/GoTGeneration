@@ -1,12 +1,14 @@
 from keras.models import load_model
-from preprocess import char_indices, indices_char, maxlen, chars, text
+from preprocess import char_indices, indices_char, chars, text
 from sampling_utils.sample import sample
 import numpy as np
 import random
 import os
-from config import generating_config
+from config import generating_config, training_config
 
 config = generating_config
+
+maxlen = training_config['maxlen']
 
 model = load_model(os.path.join("models", config['model_name']))
 
@@ -20,6 +22,10 @@ else:
     start_index = random.randint(0, len(text) - maxlen - 1)
     sentence = text[start_index: start_index + maxlen]
     generated += sentence
+
+    # print seed
+    print "----- seed ----- "
+    print sentence
 
 # one-hot encode generated string in [1, 40, 60] matrix (put the text in a format the compute can understand)
 for _ in xrange(config['length']):
@@ -37,5 +43,9 @@ for _ in xrange(config['length']):
     next_char = indices_char[next_index]
     generated += next_char
     sentence = sentence[1:] + next_char
+
+if config['file']:
+    with open(os.path.join(generated, config['file']), 'w') as outfile:
+        outfile.write(generated)
 
 print generated
