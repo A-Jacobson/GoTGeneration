@@ -23,11 +23,11 @@ This is a Character level language model inspired by Andrej Kaparthy's cs231 lec
 
 
 ## Where to go from here
-- Game of Thrones chapters start with the name of the character who's POV that chapter follows in all caps (for example, "JON", "ARYA").
-generate a "JON" chapter by combining and training with only prior JON chapters.
+- Generate a "JON" chapter by combining and training with only prior JON chapters.
+Game of Thrones chapters start with the name of the character who's POV that chapter follows in all caps (for example, "JON", "ARYA").
 
-- Train a model to speak like specific characters (Tyrion) by scraping only their dialogue from the books or books + show scripts
+- Train a model to speak like specific characters (Tyrion) by scraping only their dialogue from the books or books + show scripts.
 
-- generate sample hybrid GoT chapter from prior books and other sci-fantasy text e.g. lord of the rings
+- generate sample hybrid GoT chapter from prior books and other sci-fantasy text e.g. lord of the rings.
 
-- replace proper nouns in other corpus with proper nouns in got and use new corpus to generate text (Joffrey as Ghollum?)
+- replace proper nouns in other corpus with proper nouns in got and use new corpus to generate text (Joffrey as Gollum?).
