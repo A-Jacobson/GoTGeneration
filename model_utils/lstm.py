@@ -6,7 +6,7 @@ from keras.callbacks import EarlyStopping
 
 
 # build the model: 2 stacked LSTM
-def create_lstm(input_shape):
+def create_lstm(input_shape, optimizer='adam'):
     print('Build model...')
     model = Sequential()
     model.add(LSTM(512, return_sequences=True, input_shape=input_shape))
@@ -15,5 +15,5 @@ def create_lstm(input_shape):
     model.add(Dropout(0.2))
     model.add(Dense(input_shape[1]))
     model.add(Activation('softmax'))
-    model.compile(loss='categorical_crossentropy', optimizer='adam')
+    model.compile(loss='categorical_crossentropy', optimizer=optimizer)
     return model

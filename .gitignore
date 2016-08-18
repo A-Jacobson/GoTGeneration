@@ -1,6 +1,7 @@
 
 *.pyc
 *.npy
-*ssb.txt
-corpus.txt
+/data/processed/*.txt
+/data/raw/*.txt
+!keepme
 *.npy

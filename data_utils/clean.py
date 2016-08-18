@@ -60,5 +60,4 @@ def process_files(inpath=os.path.join(os.curdir, "data/raw"), outpath=os.path.jo
         with open(outname, 'w') as outfile:
             text = open(infile).read()
             text = fix_ascii(text)
-            text = re.sub('\n+', "", text)
             outfile.write(text)

@@ -26,7 +26,7 @@ else:
     # print seed
     print "----- seed ----- "
     print sentence
-
+    print "----- generated -----"
 # one-hot encode generated string in [1, 40, 60] matrix (put the text in a format the compute can understand)
 for _ in xrange(config['length']):
     x = np.zeros((1, maxlen, len(chars)))
@@ -45,7 +45,7 @@ for _ in xrange(config['length']):
     sentence = sentence[1:] + next_char
 
 if config['file']:
-    with open(os.path.join(generated, config['file']), 'w') as outfile:
+    with open(os.path.join('generated', config['file']), 'w') as outfile:
         outfile.write(generated)
 
 print generated
