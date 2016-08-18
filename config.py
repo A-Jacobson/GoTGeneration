@@ -2,11 +2,11 @@
 training_config = {
         "maxlen" : 40, # max length of sequences
         "step" : 3, # step size (will determine overlap of the sequences)
-        "load_model" : True, # load pretrained
+        "load_model" : False, # load pretrained
         "load_weights" : False, # if your training is cut off after 10 epoch but before training is finished, weights will have been saved in models/tmp/. , use this to recover them
         "model_name" : "LSTM.h5", # will add GRU
         "nb_epoch" : 1, # set to 1 if you want to train incrementally, set >=10 for full training
-        "batch_size" : 256
+        "batch_size" : 512
 }
 
 generating_config = {
