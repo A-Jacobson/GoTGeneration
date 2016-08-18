@@ -20,7 +20,7 @@ else:
     model = create_lstm(input_shape=(X.shape[1], X.shape[2]))
 
 if config['load_weights'] == True:
-    model.load_weights(os.path.join('models', 'tmp', 'weights.hdf5')
+    model.load_weights(os.path.join('models', 'tmp', 'weights.hdf5'))
 
 # setup checkpoints to save new weights every epoch if those weights result in a lower loss
 earlystop = EarlyStopping(monitor='loss', patience=2, verbose=1, mode='auto')
@@ -29,3 +29,8 @@ history = model.fit(X, y, batch_size=config['batch_size'], nb_epoch=config['nb_e
 
 # save model architecure, weights, and loss hist
 model.save(os.path.join("models", "LSTM.h5"))
+
+with open(os.path.join("training_hist", "hist.txt", 'w') as outfile:
+    outfile.write(history.history)
+
+print history.history

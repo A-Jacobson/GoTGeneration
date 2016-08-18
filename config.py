@@ -13,6 +13,6 @@ generating_config = {
         "model_name" : "LSTM.h5",
         "seed" : False, # optionally, set your own seed here, must be 40 characters including spaces and punctuation
         "diversity" : 1.0,
-        "length" : 1000,  # length of the generated text. one page ~= 28000 characters
+        "length" : 28000,  # length of the generated text. one page ~= 28000 characters
         "file" : "fakegot.txt" # set to None to just print your text
 }

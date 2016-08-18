@@ -23,12 +23,15 @@ This is a Character level language model inspired by Andrej Kaparthy's cs231 lec
 
 ## Getting started
 - all configurations should be set in `config.py`
+- there is sample output from a model trained for only 3 epochs with a loss of 1.21 in `generated/samplegot.txt`
 
 1. place your raw text files in `data/raw` then run `python preprocess.py` (you only have to do this when you add new data).
 2. run `python train.py` to train your model.
-3. once you have a trained model run `python generate.py` to generate text with the model you specified in `config.py`
+3. once you have a trained model run `python generate.py` to generate text with the model you specified in `config.py` (generating long sequences can take a long time, since the model has to predict each character)
 
 ## Where to go from here
+- preprocess the text in different ways (leave newline characters and capital letters)
+
 - Generate a "JON" chapter by combining and training with only prior JON chapters.
 Game of Thrones chapters start with the name of the character who's POV that chapter follows in all caps (for example, "JON", "ARYA").
 
