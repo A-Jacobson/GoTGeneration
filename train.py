@@ -30,7 +30,6 @@ history = model.fit(X, y, batch_size=config['batch_size'], nb_epoch=config['nb_e
 # save model architecure, weights, and loss hist
 model.save(os.path.join("models", "LSTM.h5"))
 
+print history.history
 with open(os.path.join("training_hist", "hist.txt"), 'w') as outfile:
     outfile.write(history.history)
-
-print history.history
