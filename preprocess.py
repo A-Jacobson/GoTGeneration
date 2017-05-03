@@ -6,10 +6,13 @@ config = training_config
 maxlen = config['maxlen']
 step = config['step']
 
-chars, char_indices, indices_char, text = make_dicts()
 
 if __name__ == "__main__":
     process_files()
     combine_documents()
+
+chars, char_indices, indices_char, text = make_dicts()
+
+if __name__ == "__main__":
     sentences, next_chars = make_sequences(maxlen=maxlen, step=step)
     vectorize(sentences, next_chars, chars, maxlen, char_indices)
